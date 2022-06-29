@@ -9,24 +9,21 @@ seo_slug:
 body:
 
 About
-
 Documentation
-
 Press
-
 Blog
-
 Newsletter
-
+Support
+Community
 Contact
-
+Jobs
 About Tor Browser
 Downloading
-Running Tor Browser for the first time
+Running Tor Browser for the First Time
 Pluggable transports
 Circumvention
 Bridges
-Managing identities
+Managing Identities
 Onion Services
 Secure Connections
 Security Settings
@@ -34,6 +31,9 @@ Updating
 Plugins
 Troubleshooting
 Uninstalling
-Known issues
+Known Issues
+Mobile Tor
 Becoming a Tor Translator
-
+Making Tor Browser Portable
+Installation
+PrivChat

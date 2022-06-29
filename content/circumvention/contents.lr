@@ -6,32 +6,65 @@ description: What to do if the Tor network is blocked
 ---
 seo_slug: circumvention
 ---
-key: 4
+key: 6
 ---
 body:
 
-Direct access to the Tor network may sometimes be blocked by your Internet Service Provider or by a government. Tor Browser includes some circumvention tools for getting around these blocks. These tools are called “pluggable transports”. See the <a href="/en-US/transports">Pluggable Transports</a> page for more information on the types of transport that are currently available.
+Direct access to the Tor network may sometimes be blocked by your Internet Service Provider or by a government.
+Tor Browser includes some circumvention tools for getting around these blocks. These tools are called “pluggable transports”.
 
-Tor Browser currently has four pluggable transport options to choose from.
+### TYPES OF PLUGGABLE TRANSPORT
 
-##### USING PLUGGABLE TRANSPORTS
+Currently there are three pluggable transports available, but more are being developed.
 
-<img class="col-md-6" src="../../static/images/configure.png">
+<table class="table table-striped">
+<tbody>
+<tr class="odd">
+<td>
+    obfs4
+</td>
+<td>
+    obfs4 makes Tor traffic look random, and also prevents censors from finding bridges by Internet scanning. obfs4 bridges are less likely to be blocked than its predecessors, obfs3 bridges.
+</td>
+</tr>
+<tr class="odd">
+<td>
+meek
+</td>
+<td>
+    meek transports make it look like you are browsing a major web site instead of using Tor. meek-azure makes it look like you are using a Microsoft web site.
+</td>
+</tr>
+<tr class="even">
+<td>
+    Snowflake
+</td>
+<td>
+    Snowflake is an improvement upon Flashproxy. It sends your traffic through WebRTC, a peer-to-peer protocol with built-in NAT punching.
+</td>
+</tr>
+</tbody>
+</table>
 
-To use pluggable transports, click 'Configure' in the Tor Launcher window that appears when you first run Tor Browser.
 
-You can also configure pluggable transports while Tor Browser is running by clicking on the onion icon to the left of the address bar, then selecting 'Tor Network Settings'.
+### USING PLUGGABLE TRANSPORTS
 
-Select 'Tor is censored in my country,' then click 'Select a built-in bridge.' Click on the drop-down menu and select the pluggable transport you'd like to use.
+To use a pluggable transport, click "Tor Network Settings" when starting Tor Browser for the first time.
+Under the "Bridges" section, select the checkbox "Use a bridge" and choose the "Select a built-in bridge" option.
+From the dropdown, select whichever pluggable transport you'd like to use.
+Once you've selected the pluggable transport, scroll up and click "Connect" to save your settings.
 
-<img class="col-md-6" src="../../static/images/bridges.png">
+Or, if you have Tor Browser running, click on "Preferences" (or "Options" on Windows) in the [hamburger menu (≡)](https://support.torproject.org/glossary/hamburger-menu/) and then on "Tor" in the sidebar.
+In the "Bridges" section, select the checkbox "Use a bridge", and from the option "Select a built-in bridge", choose whichever pluggable transport you'd like to use from the dropdown.
+Your settings will automatically be saved once you close the tab.
 
-Click 'OK' to save your settings.
 
-##### WHICH TRANSPORT SHOULD I USE?
+### WHICH TRANSPORT SHOULD I USE?
 
-Each of the transports listed in Tor Launcher’s menu works in a different way (for more details, see the <a href="/en-US/transports">Pluggable Transports</a> page), and their effectiveness depends on your individual circumstances.
+Each of the transports listed in Tor Bridge's menu works in a different way, and their effectiveness depends on your individual circumstances.
 
-If you are trying to circumvent a blocked connection for the first time, you should try the different transports: obfs3, obfs4, fte, and meek-azure.
+If you are trying to circumvent a blocked connection for the first time, you should try the different transports: obfs4, snowflake, or meek-azure.
 
-If you try all of these options, and none of them gets you online, you will need to enter bridge addresses manually. Read the <a href="/en-US/bridges/">Bridges</a> section to learn what bridges are and how to obtain them.
+If you try all of these options, and none of them gets you online, you will need to request a bridge or manually enter bridge addresses.
+
+Read the [Bridges](../bridges/) section to learn what bridges are and how to obtain them.

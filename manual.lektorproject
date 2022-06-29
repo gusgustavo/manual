@@ -4,12 +4,6 @@ url = https://manual.torproject.org/
 url_style = relative
 locale = en
 
-[alternatives.en]
-name = English (en)
-primary = yes
-url_prefix = /
-locale = en
-
 [alternatives.ar]
 name = عربية (ar)
 url_prefix = /ar/
@@ -21,7 +15,7 @@ url_prefix = /bn/
 locale = bn
 
 [alternatives.ca]
-name = Catala (ca)
+name = Català (ca)
 url_prefix = /ca/
 locale = ca
 
@@ -35,18 +29,19 @@ name = Ελληνικά (el)
 url_prefix = /el/
 locale = el
 
+[alternatives.en]
+name = English (en)
+primary = yes
+url_prefix = /
+locale = en
+
 [alternatives.es]
 name = Español (es)
 url_prefix = /es/
 locale = es
 
-[alternatives.es-AR]
-name = Español Arg. (es-AR)
-url_prefix = /es-AR/
-locale = es-AR
-
 [alternatives.fr]
-name = Français
+name = Français (fr)
 url_prefix = /fr/
 locale = fr
 
@@ -60,30 +55,55 @@ name =  עברית (he)
 url_prefix = /he/
 locale = he
 
+[alternatives.hu]
+name =  Magyar nyelv (hu)
+url_prefix = /hu/
+locale = hu
+
 [alternatives.id]
-name = Indonesia
+name = Indonesia (id)
 url_prefix = /id/
 locale = id
-
-[alternatives.it]
-name = Italia
-url_prefix = /it/
-locale = it
 
 [alternatives.is]
 name = Íslenska (is)
 url_prefix = /is/
 locale = is
 
+[alternatives.it]
+name = Italiano (it)
+url_prefix = /it/
+locale = it
+
 [alternatives.ka]
-name = Georgian (ka)
+name = ქართული ენა (ka)
 url_prefix = /ka/
 locale = ka
+
+[alternatives.km]
+name = ភាសាខ្មែរ (km)
+url_prefix = /km/
+locale = km
+
+[alternatives.ko]
+name = 한국어 (ko)
+url_prefix = /ko/
+locale = ko
+
+[alternatives.lt]
+name = lietuvių (lt)
+url_prefix = /lt/
+locale = lt
 
 [alternatives.mk]
 name = Macedonian (mk)
 url_prefix = /mk/
 locale = mk
+
+[alternatives.my]
+name = မြန်မာဘာသာ (my)
+url_prefix = /my/
+locale = my
 
 [alternatives.pt-BR]
 name = Português (Brasil)
@@ -111,7 +131,7 @@ url_prefix = /th/
 locale = th
 
 [alternatives.tr]
-name = Turkish
+name = Türkçe (tr)
 url_prefix = /tr/
 locale = tr
 
@@ -119,3 +139,8 @@ locale = tr
 name = 简体中文 (zh-CN)
 url_prefix = /zh-CN/
 locale = zh-CN
+
+[alternatives.zh-TW]
+name = 正體字 (zh-TW)
+url_prefix = /zh-TW/
+locale = zh-TW

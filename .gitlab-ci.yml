@@ -1,0 +1,11 @@
+---
+variables:
+  SITE_URL: tb-manual.torproject.org
+  STAGING_URL: tb-manual.staging.torproject.net
+  TRANSLATION_BRANCH: tbmanual-contentspot
+
+include:
+  - project: tpo/tpa/ci-templates
+    file:
+      - lektor.yml
+      - static-shim-deploy.yml

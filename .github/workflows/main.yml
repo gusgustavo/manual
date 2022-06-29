@@ -1,0 +1,31 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+on: [push]
+jobs:
+  lektor-build:
+    runs-on: python:3.8-bullseye
+    steps:
+      - apt-get install python3-pip git python3-inifile python3-dev python3-setuptools python3-openssl python3-cryptography python3-venv apt-utils ca-certificates -y
+      - python3 -m venv venv
+      - source venv/bin/activate
+      - pip3 install lektor
+      - >
+        if [ -n "${TRANSLATION_BRANCH}" ]; then
+          apt-get install gettext python3-babel i18nspector
+          echo 'checking out translations'
+          rm -rf i18n
+          git clone --branch "${TRANSLATION_BRANCH}" --depth=1 https://git.torproject.org/translation.git i18n
+          echo 'reinstall lektor plugins'
+          lektor project-info --output-path
+          lektor plugins reinstall
+          echo 'building lektor 3 more times to get translations in place'
+          for i in 1 2 3; do lektor build --buildstate-path .cache/lektor --output-path public || exit 1; done
+        else
+          # 'packages' may be a symlink to lego, which may include 'i18n'
+          # it's not needed at all to build a site without translations
+          # remove it before build, since this plugin is known to cause
+          # problems in some environments (eg. python >=3.9)
+          [ -e packages/i18n ] && rm -rf packages/i18n
+          lektor build --buildstate-path .cache/lektor --output-path public
+        fi
